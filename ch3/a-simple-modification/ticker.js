@@ -2,9 +2,8 @@ import {EventEmitter} from 'events';
 
 class Ticker extends EventEmitter {
     static #timeout = 50;
-    static #validationError = new Error(`The number has be higher than ${Ticker.#timeout}ms`);
 
-    #totalTicks = 0;
+    #totalTicks;
     #number;
     #callback;
 
@@ -30,16 +29,11 @@ class Ticker extends EventEmitter {
     }
 
     start() {
-        if (this.#number >= Ticker.#timeout) {
-            setImmediate(() => {
-                this.#totalTicks++;
-                this.emit('tick', 0);
-            });
+        setImmediate(() => {
+            this.#totalTicks = 1;
+            this.emit('tick', 0);
             this.#executeTimer();
-        } else {
-            this.#callback(Ticker.#validationError);
-            this.emit('error', Ticker.#validationError);
-        }
+        });
 
         return this;
     }

@@ -2,9 +2,7 @@ import tickerFun from './ticker.js';
 
 const number = process.argv[2] ?? 200;
 const cb = (err, count) => {
-    if (err) {
-        console.error(err);
-    }
+    if (err) return console.error(err);
 
     console.log(`The total number of ticks is: ${count}`);
 };
