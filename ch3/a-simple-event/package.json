@@ -1,0 +1,10 @@
+{
+  "name": "callbacks-and-events",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+  }
+}
