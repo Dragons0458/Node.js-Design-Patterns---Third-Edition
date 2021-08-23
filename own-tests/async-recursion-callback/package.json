@@ -1,0 +1,11 @@
+{
+  "name": "async-recursion-callback",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start-read-content": "node read-content-dir.js",
+    "start-read-files": "node read-files-paths.js"
+  },
+  "dependencies": {
+  }
+}
