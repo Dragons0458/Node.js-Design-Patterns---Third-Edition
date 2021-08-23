@@ -6,3 +6,6 @@ Only access to sub folders and execute:
 ```npm
 npm run start
 ```
+
+## On the folder own-tests
+Access to each subfolder and check scripts in package.json to know what script to run.
